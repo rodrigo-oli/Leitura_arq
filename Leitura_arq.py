@@ -12,7 +12,7 @@ def analisar_dados(arquivo):
        
     # Verifica se a coluna "promo" contém apenas números inteiros
     if pd.api.types.is_integer_dtype(df["promo_stock"]):
-        #st.write("Todos os valores da coluna 'promo_stock' são inteiros.")
+        st.write("promo_stock ok.")
     else:
         st.write("A coluna 'promo_stock' contém valores NÃO inteiros(ex:2,5)")
     
@@ -26,7 +26,7 @@ def analisar_dados(arquivo):
         if n_incorrect > 0:
             st.write(f"{n_incorrect} valores na coluna {col} não está no formato correto.")
     if n_dates_incorrect == 0:
-        #st.write("Todas as datas estão no formato correto.")
+        st.write("Datas ok.")
     
         # Verifica se a coluna "preco_negociado" contém valores menores ou iguais a zero
     if (df["preco_negociado"] == 0).any():
