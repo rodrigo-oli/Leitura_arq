@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
-
-
+pip install openpyxl
 import streamlit as st
 import pandas as pd
 
