@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import openpyxl
 
 def analisar_dados(arquivo):
     # Carrega o arquivo em um DataFrame do pandas
