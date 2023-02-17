@@ -4,8 +4,7 @@ import pandas as pd
 
 def analisar_dados(arquivo):
     # Carrega o arquivo em um DataFrame do pandas
-    df_1 = openpyxl.load_workbook(‘workbook.xlsx’)
-    df = df_1[‘deals_pool’]
+    df = pd.read_excel(arquivo)
     
     # Verifica a quantidade de valores duplicados nas colunas item e model
     qtd_duplicados = df[['model_id']].duplicated().sum()
