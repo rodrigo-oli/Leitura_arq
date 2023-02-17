@@ -1,14 +1,11 @@
-
+import openpyxl
 import streamlit as st
 import pandas as pd
 
-# In[2]:
-
-
 def analisar_dados(arquivo):
     # Carrega o arquivo em um DataFrame do pandas
-    df = pd.read_excel(arquivo)
-
+    df_1 = openpyxl.load_workbook(‘arquivo.xlsx’)
+    df = df_1[‘deals_pool’]
     
     # Verifica a quantidade de valores duplicados nas colunas item e model
     qtd_duplicados = df[['model_id']].duplicated().sum()
